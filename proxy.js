@@ -28,8 +28,8 @@ export function proxy(request) {
     ? hostname.replace(`.${PRODUCTION_DOMAIN}`, '')
     : hostname.split(':')[0].replace('localhost', '').replace('127.0.0.1', '');
 
-  // Skip apex / www
-  if (!subdomain || subdomain === 'www') {
+  // Skip apex domains and special subdomains
+  if (!subdomain || subdomain === 'www' || subdomain === 'dev') {
     return NextResponse.next();
   }
 
