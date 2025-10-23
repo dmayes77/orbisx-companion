@@ -1,0 +1,21 @@
+.logo {
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--bs-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.logo:hover {
+  color: var(--bs-primary-dark, #0056b3);
+}
+
+@media (min-width: 768px) {
+  .logo {
+    text-align: left;
+    font-size: 1.75rem;
+  }
+}

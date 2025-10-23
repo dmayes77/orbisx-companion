@@ -1,0 +1,29 @@
+.featureCard {
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.2s;
+}
+
+.featureCard:hover {
+  transform: translateY(-4px);
+}
+
+.featureIcon {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+  color: var(--bs-primary);
+}
+
+.featureTitle {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.featureDescription {
+  color: var(--bs-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+}

@@ -1,0 +1,293 @@
+/* =========================================================================
+   BOOTSTRAP-ONLY BASE + THEME (no Tailwind)
+   ========================================================================= */
+
+/* Base reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #1f2937; /* neutral dark gray */
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Neutralize Bootstrap’s default element typography so you set it explicitly */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: inherit;
+  font-size: 1rem;
+}
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+figure,
+blockquote,
+hr {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+/* Forms: remove default padding/borders to start from a clean slate */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+.btn,
+.form-control,
+input,
+select,
+textarea {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Tables & media */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Monospace for code blocks */
+pre,
+code {
+  font-family: var(--font-mono);
+}
+
+/* =========================================================================
+   THEME TOKENS (mapped to Bootstrap vars)
+   ========================================================================= */
+:root {
+  --bs-primary: #f26739; /* brand orange */
+  --bs-secondary: #333642; /* deep slate */
+  --bs-info: #1599fa; /* accent blue */
+
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #1f2937;
+  --bs-border-color: #e5e7eb;
+  --bs-focus-ring-color: rgba(21, 153, 250, 0.25);
+
+  --radius: 10px; /* from your 0.625rem */
+  /* Optional chart colors if you need them later */
+  --chart-1: #e28a2a;
+  --chart-2: #2aa0d8;
+  --chart-3: #5166c5;
+  --chart-4: #32c06b;
+  --chart-5: #d94f4f;
+  /* System font variables */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', 'Segoe UI Mono',
+    'Courier New', monospace;
+}
+
+/* =========================================================================
+   YOUR BASELINE ELEMENT STYLES
+   ========================================================================= */
+
+/* Section spacing (replaces Tailwind px-4 py-12) */
+section {
+  width: 100%;
+  padding: 3rem 1rem;
+}
+
+/* Responsive heading scale (replaces mobile/tablet/laptop/desktop Tailwind mix) */
+h1 {
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  font-size: clamp(2rem, 2vw + 1.5rem, 4rem);
+}
+h2 {
+  margin-bottom: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  font-size: clamp(1.5rem, 1.2vw + 1.2rem, 3rem);
+}
+h3 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(1.125rem, 0.8vw + 1rem, 2rem);
+}
+h4 {
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(1rem, 0.6vw + 0.9rem, 1.5rem);
+}
+h5 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(0.95rem, 0.4vw + 0.85rem, 1.25rem);
+}
+h6 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: clamp(0.875rem, 0.3vw + 0.8rem, 1.125rem);
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: clamp(0.95rem, 0.4vw + 0.85rem, 1.125rem);
+}
+
+/* Optional utility classes similar to your .h1–.h6 */
+.h1 {
+  font-size: clamp(2rem, 2vw + 1.5rem, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.h2 {
+  font-size: clamp(1.5rem, 1.2vw + 1.2rem, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+.h3 {
+  font-size: clamp(1.125rem, 0.8vw + 1rem, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.h4 {
+  font-size: clamp(1rem, 0.6vw + 0.9rem, 1.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+.h5 {
+  font-size: clamp(0.95rem, 0.4vw + 0.85rem, 1.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+.h6 {
+  font-size: clamp(0.875rem, 0.3vw + 0.8rem, 1.125rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+/* =========================================================================
+   FORMS (keeps the useful file-input behavior)
+   ========================================================================= */
+
+/* Checkbox accent: opt-in by adding class 'custom-accent' */
+.form-check-input.custom-accent {
+  accent-color: var(--bs-primary);
+}
+
+/* File input: full-height primary button, flat hover */
+input[type='file'].form-control {
+  padding: 0;
+  overflow: hidden;
+}
+input[type='file'].form-control::file-selector-button,
+input[type='file'].form-control::-webkit-file-upload-button {
+  background: var(--bs-primary);
+  color: #fff;
+  border: none;
+  padding: 0 0.75rem;
+  height: 100%;
+}
+input[type='file'].form-control::file-selector-button:hover,
+input[type='file'].form-control::-webkit-file-upload-button:hover {
+  background: var(--bs-primary);
+}
+
+/* =========================================================================
+   KEEPERS
+   ========================================================================= */
+
+/* Builder form reset (prevents unwanted padding when embedding the OrbisX builder) */
+#_builder-form {
+  padding: 0 !important;
+}
+
+/* Optional ripple effect (use with .position-relative on parent) */
+.ripple-overlay {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+.ripple-parent:hover .ripple-overlay {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Sonner Toast container fix (safe to keep; remove if unused) */
+section[aria-label='Notifications alt+T'] {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  pointer-events: none;
+}

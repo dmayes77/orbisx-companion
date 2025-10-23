@@ -1,0 +1,49 @@
+.signupContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.logo {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--bs-primary);
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.logo:hover {
+  color: var(--bs-primary);
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.formSection {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--bs-border-radius);
+  box-shadow: var(--bs-box-shadow);
+}
+
+.signupForm {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .signupContainer {
+    padding: 1rem;
+  }
+
+  .formSection {
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+}

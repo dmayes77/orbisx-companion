@@ -1,0 +1,45 @@
+.header {
+  margin-bottom: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.tagline {
+  color: var(--bs-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  color: var(--bs-secondary);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  max-width: 50ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+.content {
+  margin-top: 2rem;
+}
+
+.left .subtitle {
+  margin-left: 0;
+  margin-right: 0;
+}

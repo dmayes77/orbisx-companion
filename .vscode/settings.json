@@ -1,0 +1,39 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "onWindowChange",
+  "explorer.compactFolders": false,
+
+  // UI
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Tailwind CSS
+  "editor.quickSuggestions": { "strings": true },
+  "tailwindCSS.emmetCompletions": true,
+
+  // JavaScript
+  "javascript.validate.enable": true,
+  "javascript.suggestionActions.enabled": true,
+  "javascript.format.enable": false,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 100,
+  "prettier.semi": true,
+
+  // React / JSX
+  "emmet.includeLanguages": { "javascript": "javascriptreact" },
+  "emmet.triggerExpansionOnTab": true,
+
+  // Hide build folders
+  "files.exclude": {
+    "**/.next": true,
+    "**/node_modules": true,
+    "**/.git": true
+  }
+}

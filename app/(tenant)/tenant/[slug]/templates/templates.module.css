@@ -1,0 +1,69 @@
+.editorContainer {
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 25%);
+  gap: 2rem;
+  min-height: calc(100vh - var(--header-height));
+}
+
+.preview {
+  background: var(--bs-white);
+  border: 1px solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  padding: 2rem;
+  box-shadow: var(--bs-box-shadow-sm);
+}
+
+.controls {
+  position: sticky;
+  top: var(--header-height);
+  padding: 1.5rem;
+  background: var(--bs-light);
+  border-radius: var(--bs-border-radius);
+  height: fit-content;
+}
+
+.controlSection {
+  margin-bottom: 2rem;
+}
+
+.controlSection:last-child {
+  margin-bottom: 0;
+}
+
+.controlLabel {
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.codeBlock {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  padding: 1rem;
+  background: var(--bs-dark);
+  color: var(--bs-light);
+  border-radius: var(--bs-border-radius-sm);
+  overflow-x: auto;
+}
+
+.copyButton {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.templateGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .editorContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    position: static;
+    margin-top: 2rem;
+  }
+}
