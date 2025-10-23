@@ -86,15 +86,15 @@ export default function SignUpPage() {
 }
 ```
 
-## Authentication Flow
+### Authentication Flow
 
 User visits `/sign-up` → enters business name, subdomain, and email. Supabase sends a Magic Link for verification. On verification a tenant record is created and the user is redirected to `businessname.orbisx-companion.app/tenant/[slug]/dashboard`.
 
-## Billing Flow
+### Billing Flow
 
 Stripe Checkout sessions are created via `/api/checkout`. Webhooks (`/api/webhooks/stripe`) update Supabase when payment succeeds. Access duration or lifetime flags are stored per-tenant.
 
-## Development
+### Development
 
 Prerequisites
 
