@@ -1,9 +1,7 @@
 import styles from './signup.module.css';
 import PageHeader from '@/components/common/PageHeader';
-import PlanCard from '@/components/pricing/PlanCard';
 import Form from '@/components/common/Form';
 import Logo from '@/components/common/Logo';
-import { plans } from '@/config/plans';
 
 export default function SignUpPage() {
   return (
@@ -12,15 +10,9 @@ export default function SignUpPage() {
         <Logo className={styles.logo} />
 
         <PageHeader
-          title="Get Started with OrbisX Companion"
-          subtitle="Choose a plan and create your account to start customizing your booking forms."
+          title="Create Your Account"
+          subtitle="Set up your OrbisX Companion workspace and start customizing your booking forms."
         />
-
-        <div className={styles.planGrid}>
-          <PlanCard {...plans.monthly} />
-          <PlanCard {...plans.sixMonth} />
-          <PlanCard {...plans.lifetime} />
-        </div>
 
         <div className={styles.formSection}>
           <Form className={styles.signupForm}>

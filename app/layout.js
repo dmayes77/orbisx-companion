@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@/styles/globals.css';
+import Navbar from '@/components/common/Navbar';
 
 export const metadata = {
   title: 'OrbisX Companion - Style Your Booking Forms',
@@ -11,7 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="min-vh-100 d-flex flex-column">{children}</div>
+        <div className="min-vh-100 d-flex flex-column">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );

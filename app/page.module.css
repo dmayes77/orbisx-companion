@@ -42,12 +42,59 @@
 
 .features {
   padding: 4rem 0;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.featuresTitle {
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--bs-secondary);
+  margin-bottom: 1rem;
+}
+
+.featuresSubtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 3.5rem;
+}
+
+.pricing {
+  padding: 5rem 0;
+  text-align: center;
+  background: white;
+}
+
+.pricingTitle {
+  font-size: clamp(1.875rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--bs-secondary);
+  margin-bottom: 1rem;
+}
+
+.pricingSubtitle {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 3.5rem;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .featureGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   margin: 3rem 0;
 }
 
@@ -60,6 +107,43 @@
   width: 3rem;
   height: 3rem;
   margin-bottom: 1rem;
+  .pricing {
+    padding: 5rem 0;
+    text-align: center;
+    background: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .pricingTitle {
+    font-size: clamp(1.875rem, 3vw, 2.5rem);
+    font-weight: 700;
+    color: var(--bs-secondary);
+    margin-bottom: 1rem;
+  }
+
+  .pricingSubtitle {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto 3.5rem;
+  }
+
+  .planGrid {
+    display: grid;
+    /* Force three columns on desktop so all plans stay on one row until mobile */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .planGrid {
+      /* Stack plans on small screens */
+      grid-template-columns: 1fr;
+    }
+  }
   color: var(--bs-primary);
 }
 

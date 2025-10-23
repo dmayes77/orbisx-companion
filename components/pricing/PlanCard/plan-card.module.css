@@ -70,7 +70,8 @@
 }
 
 .planFeatures li:not(:last-child) {
-  border-bottom: 1px solid var(--bs-border-color);
+  /* removed separator lines between features for a cleaner look */
+  border-bottom: none;
 }
 
 .planButton {

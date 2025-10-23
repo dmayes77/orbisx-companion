@@ -1,0 +1,21 @@
+name: Deploy dev to Vercel
+
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch: {}
+
+jobs:
+  trigger-vercel-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel Deploy Hook (dev)
+        env:
+          VERCEL_DEV_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEV_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$VERCEL_DEV_DEPLOY_HOOK_URL" ]; then
+            echo "❌ Missing secret: VERCEL_DEV_DEPLOY_HOOK_URL"
+            exit 1
+          fi
+          curl -s -X POST "$VERCEL_DEV_DEPLOY_HOOK_URL" -H "Content-Type: application/json" -d '{}' \
+            && echo "✅ Triggered Vercel deploy for dev" || (echo "❌ Failed to trigger deploy" && exit 1)
