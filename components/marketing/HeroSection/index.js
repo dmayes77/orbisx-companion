@@ -19,10 +19,12 @@ export default function HeroSection({
 
       <div className={styles.content}>
         <div className="container">
-          <p className={styles.tagline}>{tagline}</p>
-          <h1 className={styles.heading}>{heading}</h1>
-          <p className={styles.subheading}>{subheading}</p>
-          <div className={styles.cta}>
+          <p className={`${styles.tagline} animate-fade-in in-view`}>{tagline}</p>
+          <h1 className={`${styles.heading} animate-fade-in-up delay-100 in-view`}>{heading}</h1>
+          <p className={`${styles.subheading} animate-fade-in-up delay-200 in-view`}>
+            {subheading}
+          </p>
+          <div className={`${styles.cta} animate-fade-in-up delay-300 in-view`}>
             <Button href={primaryCTA.href}>{primaryCTA.text}</Button>
             <Button href={secondaryCTA.href} variant="primary" outline>
               {secondaryCTA.text}

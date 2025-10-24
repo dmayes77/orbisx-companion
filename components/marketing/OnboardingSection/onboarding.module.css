@@ -1,0 +1,16 @@
+.sectionWrapper {
+  padding: 4rem 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.15);
+}
+
+.heading {
+  color: var(--foreground-text-light);
+}

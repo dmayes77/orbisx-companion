@@ -25,7 +25,7 @@ export const plans = {
   },
   lifetime: {
     name: 'Lifetime',
-    price: 658,
+    price: 659,
     period: 'one-time',
     features: [
       'All templates included',

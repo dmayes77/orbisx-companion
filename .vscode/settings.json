@@ -12,10 +12,11 @@
   // UI
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.iconTheme": "material-icon-theme",
-
-  // Tailwind CSS
-  "editor.quickSuggestions": { "strings": true },
-  "tailwindCSS.emmetCompletions": true,
+  "editor.quickSuggestions": {
+    "comments": "off",
+    "strings": "off",
+    "other": "off"
+  },
 
   // JavaScript
   "javascript.validate.enable": true,

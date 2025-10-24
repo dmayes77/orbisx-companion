@@ -7,23 +7,36 @@
   transition: all 0.2s ease;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
 }
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.15);
+  /* Elongate shadow downward so it looks cast away from the lifted button */
+  box-shadow: 0 18px 28px -8px rgba(0, 0, 0, 0.35);
 }
 
 .button:focus {
   outline: none;
-  box-shadow: 0 4px 12px rgba(var(--bs-primary-rgb), 0.15);
+  box-shadow: 0 18px 28px -8px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.05s ease; /* Quick press feedback */
+}
+
+/* Delay return to resting state so user sees the pressed state */
+.button:not(:active) {
+  transition: all 0.3s ease 0.1s;
 }
 
 .button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
-  box-shadow: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 /* Ripple overlay (scoped) */
@@ -40,10 +53,6 @@
   transition: transform 0.7s ease-out, opacity 0.7s ease-out;
 }
 
-.rippleParent:hover .rippleOverlay {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-}
 /* Size variants */
 .sm {
   padding: 0.5rem 1.5rem;
@@ -64,6 +73,7 @@
 .primary {
   background-color: var(--bs-primary);
   color: white;
+  border-color: var(--bs-primary);
 }
 
 .primary:hover:not(:disabled) {
@@ -71,16 +81,44 @@
   border-color: var(--bs-primary);
 }
 
-/* Outline variants */
-.outline {
-  background-color: transparent;
+/* Light variant - for use on primary backgrounds */
+.light {
+  background-color: white;
+  color: var(--bs-primary);
+  border-color: white;
+}
+
+.light:hover:not(:disabled) {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
   color: var(--bs-primary);
 }
 
-.outline:hover:not(:disabled) {
+/* Outline variants */
+.outline {
+  background-color: transparent;
+}
+
+.primary.outline {
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.primary.outline:hover:not(:disabled) {
   background-color: rgba(var(--bs-primary-rgb), 0.04);
   color: var(--bs-primary);
   border-color: var(--bs-primary);
+}
+
+.light.outline {
+  color: white;
+  border-color: white;
+}
+
+.light.outline:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: white;
 }
 
 /* Mobile responsiveness */
